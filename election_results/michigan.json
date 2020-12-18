@@ -1,0 +1,314 @@
+{
+  "data": {
+    "races": [
+      {
+        "race_id": "MI-G-P-2020-11-03",
+        "race_slug": "mi-president-general-2020-11-03",
+        "url": "https://www.nytimes.com/interactive/2020/11/03/us/elections/results-michigan-president.html",
+        "state_page_url": "https://www.nytimes.com/interactive/2020/11/03/us/elections/results-michigan.html",
+        "ap_polls_page": "https://www.nytimes.com/interactive/2020/11/03/us/elections/ap-polls-michigan.html",
+        "edison_exit_polls_page": "https://www.nytimes.com/interactive/2020/11/03/us/elections/exit-polls-michigan.html",
+        "race_type": "president",
+        "election_type": "general",
+        "election_date": "2020-11-03",
+        "runoff": false,
+        "race_name": "President",
+        "office": "President",
+        "officeid": "P",
+        "nyt_race_description": "Michigan had been reliably blue in choosing a president for nearly 25 years, until 2016, when Donald Trump won the state by the smallest margin in the country – 10,704 votes. But Joseph R. Biden Jr. has seen consistent leads in virtually all the polls leading up to Election Day.",
+        "race_rating": "lean-dem",
+        "seat": "",
+        "seat_name": "",
+        "state_id": "MI",
+        "state_slug": "michigan",
+        "state_name": "Michigan",
+        "state_nyt_abbrev": "Mich.",
+        "state_shape": "horizontal",
+        "party_id": "",
+        "uncontested": false,
+        "report": true,
+        "result": "winner",
+        "result_source": "NYT",
+        "gain": true,
+        "lost_seat": "",
+        "votes": 5531329,
+        "electoral_votes": 16,
+        "absentee_votes": 1423089,
+        "absentee_counties": 13,
+        "absentee_count_progress": "unknown",
+        "poll_display": "First polls close at 8 p.m. Eastern time.",
+        "poll_countdown_display": "First polls close in",
+        "poll_waiting_display": "Most polls have closed.",
+        "poll_time": "2020-11-04T01:00:00.000Z",
+        "poll_time_short": "8 p.m.",
+        "precincts_reporting": 4881,
+        "precincts_total": 4974,
+        "reporting_display": "98% reporting",
+        "reporting_value": "98%",
+        "eevp": 99,
+        "tot_exp_vote": 5550000,
+        "eevp_source": "edison",
+        "eevp_value": ">98%",
+        "eevp_display": ">98% reported",
+        "county_data_source": "edison",
+        "incumbent_party": "",
+        "no_forecast": false,
+        "last_updated": "2020-11-11T03:26:22Z",
+        "candidates": [
+          {
+            "candidate_id": "biden-1036",
+            "candidate_key": "bidenj",
+            "first_name": "Joseph R.",
+            "last_name": "Biden",
+            "order": 4,
+            "name_display": "Joseph R. Biden Jr.",
+            "party_id": "democrat",
+            "incumbent": false,
+            "runoff": false,
+            "winner": true,
+            "result_source": "NYT",
+            "votes": 2795649,
+            "percent": 50.5,
+            "percent_display": "50.5",
+            "electoral_votes": 16,
+            "absentee_votes": 971867,
+            "absentee_percent": 68.3,
+            "img_url": "https://static01.nyt.com/elections-assets/2020/assets/images/candidates/bidenj.png",
+            "has_image": true,
+            "link": "https://www.nytimes.com/interactive/2020/us/elections/joe-biden.html",
+            "pronoun": "he"
+          }
+        ],
+        "has_incumbent": true,
+        "leader_margin_value": 2.6873,
+        "leader_margin_votes": 148645,
+        "leader_margin_display": "D+3",
+        "leader_margin_name_display": "Biden +3",
+        "leader_party_id": "democrat",
+        "counties": [
+          {
+            "fips": "26001",
+            "name": "Alcona",
+            "votes": 7063,
+            "absentee_votes": 0,
+            "reporting": 12,
+            "precincts": 12,
+            "absentee_method": "Merged into voters' home precincts and released with cumulative results",
+            "eevp": 100,
+            "tot_exp_vote": 7063,
+            "eevp_value": ">98%",
+            "eevp_display": ">98% reported",
+            "eevp_source": "edison",
+            "turnout_stage": 6,
+            "absentee_count_progress": "all",
+            "absentee_max_ballots": 731,
+            "results": {
+              "bidenj": 2142,
+              "trumpd": 4848,
+              "jorgensenj": 50,
+              "blankenshipd": 12,
+              "hawkinsh": 11,
+              "de_la_fuenter": 0,
+              "write-ins": 0
+            },
+            "results_absentee": {
+              "bidenj": 0,
+              "trumpd": 0,
+              "jorgensenj": 0,
+              "blankenshipd": 0,
+              "hawkinsh": 0,
+              "de_la_fuenter": 0,
+              "write-ins": 0
+            },
+            "last_updated": "2020-11-11T03:25:56Z",
+            "leader_margin_value": 38.3123,
+            "leader_margin_display": "R+38",
+            "leader_margin_name_display": "Trump +38",
+            "leader_party_id": "republican",
+            "margin2020": 38.3123,
+            "votes2016": 6198,
+            "margin2016": 39.8,
+            "votes2012": 6104,
+            "margin2012": 18
+          }
+        ],
+        "precinct_metadata": {
+          "latest_url": "https://static01.nyt.com/elections-assets/2020/data/api/2020-11-03/precincts/MIGeneralConcatenator-latest.json",
+          "timestamped_url": "https://static01.nyt.com/elections-assets/2020/data/api/2020-11-03/precincts/MIGeneralConcatenator-2020-11-10T19:13:08.066Z.json",
+          "last_run": "2020-11-10 19:13:09.339",
+          "status": "duplicate"
+        },
+        "votes2016": 4824260,
+        "margin2016": 0.2,
+        "clinton2016": 2268839,
+        "trump2016": 2279543,
+        "votes2012": 4730984,
+        "margin2012": -9.5,
+        "expectations_text": "",
+        "expectations_text_short": "",
+        "absentee_ballot_deadline": 0,
+        "absentee_postmark_deadline": -1,
+        "update_sentences": {
+          "top_level": {
+            "sentence": "Joseph R. Biden Jr. wins Michigan.",
+            "timestamp": 1604526142340,
+            "is_new": false,
+            "hide_timestamp": false,
+            "generatedText": "Joseph R. Biden Jr. wins Michigan.",
+            "sentence_type": "race_won"
+          },
+          "winner_card_leadin": {
+            "sentence": "",
+            "timestamp": 1604526142340,
+            "is_new": false,
+            "hide_timestamp": false,
+            "generatedText": "",
+            "sentence_type": "race_won"
+          },
+          "counties": {
+            "sentence": "We just received more votes from Mackinac and Baraga Counties. We’re still waiting for more votes to be counted in six counties.",
+            "timestamp": 1605045853733,
+            "is_new": false,
+            "hide_timestamp": false,
+            "generatedText": "We just received more votes from Mackinac and Baraga Counties. We’re still waiting for more votes to be counted in six counties.",
+            "sentence_type": "race_won"
+          },
+          "eevp": {
+            "sentence": "Nearly all of the estimated vote total has been reported.",
+            "timestamp": 1604536184579,
+            "is_new": false,
+            "hide_timestamp": false,
+            "generatedText": "Nearly all of the estimated vote total has been reported.",
+            "sentence_type": "has_eevp"
+          },
+          "eevp_leadin": {
+            "sentence": "",
+            "timestamp": 1604611458776,
+            "is_new": false,
+            "hide_timestamp": false,
+            "generatedText": "",
+            "sentence_type": "additional_votes_reported"
+          }
+        },
+        "race_diff": {
+          "race_slug": "mi-president-general-2020-11-03",
+          "boolean_things_that_happened": {
+            "zero_votes": false,
+            "results_expected_within_hour": true,
+            "show_nothing_votes_decreased": false,
+            "went_to_runoff": false,
+            "race_won": true,
+            "race_just_won": false,
+            "race_unwon": false,
+            "additional_votes_reported": false,
+            "additional_precincts_reported": false,
+            "has_eevp": true
+          },
+          "details_about_changes": {}
+        },
+        "winnerCalledTimestamp": 1604526146257,
+        "timeseries": [
+          {
+            "vote_shares": {
+              "trumpd": 0,
+              "bidenj": 0
+            },
+            "votes": 0,
+            "eevp": 0,
+            "eevp_source": "edison",
+            "timestamp": "2020-11-04T10:00:04Z"
+          }
+        ]
+      }
+    ],
+    "party_control": [
+      {
+        "race_type": "house",
+        "state_id": "",
+        "needed_for_control": 218,
+        "total": 435,
+        "no_election": {},
+        "winner": "democrat",
+        "parties": {
+          "democrat": {
+            "party_id": "democrat",
+            "name_display": "Democrats",
+            "name_abbr": "Dem.",
+            "count": 218,
+            "votes": 73095707,
+            "percent": "50.2",
+            "change": -5,
+            "flip_count": 3,
+            "leader_count": 3,
+            "change_full": "Lost 5 seats",
+            "change_abbr": "–5",
+            "flip_text_full": "Flipped 3 seats",
+            "flip_text_extra": "",
+            "flip_text_abbr": "Flipped 3",
+            "winner": true
+          },
+          "republican": {
+            "party_id": "republican",
+            "name_display": "Republicans",
+            "name_abbr": "Rep.",
+            "count": 201,
+            "votes": 70475452,
+            "percent": "48.4",
+            "change": 6,
+            "flip_count": 9,
+            "leader_count": 12,
+            "change_full": "Gained 6 seats",
+            "change_abbr": "+6",
+            "flip_text_full": "Flipped 9 seats",
+            "flip_text_extra": "(+6 net gain)",
+            "flip_text_abbr": "Flipped 9",
+            "winner": false
+          },
+          "other": {
+            "party_id": "other",
+            "name_display": "Ind.",
+            "name_abbr": "Ind.",
+            "count": 0,
+            "votes": 2082927,
+            "percent": "1.4",
+            "change": -1,
+            "flip_count": 0,
+            "leader_count": 0,
+            "change_full": "Lost 1 seat",
+            "change_abbr": "–1",
+            "flip_text_full": "",
+            "flip_text_extra": "",
+            "flip_text_abbr": "",
+            "winner": false
+          }
+        },
+        "winnerCalledTimestamp": 1605037824736
+      }
+    ],
+    "liveUpdates": [
+      {
+        "id": "535",
+        "author": "Reid Epstein",
+        "author_title_or_location": "in Washington",
+        "text": "The New York Times called top elections officials in all 50 states, and found none who pointed to any fraud episodes this year.",
+        "link_url": "https://www.nytimes.com/2020/11/10/us/politics/voting-fraud.html",
+        "link_text": "",
+        "linked_state_1": "",
+        "linked_state_2": "",
+        "linked_state_3": "",
+        "image_url": "",
+        "image_credit": "",
+        "datetime": 1605061866000,
+        "author_headshot": "https://static01.nyt.com/images/2019/06/25/reader-center/author-reid-epstein/9e877853d8234217b58e5762253aa771-thumbLarge.png",
+        "is_today": false,
+        "linked_states": {},
+        "winner": {}
+      }
+    ]
+  },
+  "meta": {
+    "version": [14733],
+    "track": ["2020-11-03"],
+    "timestamp": ["2020-11-11T10:25:42.547Z"]
+  }
+}

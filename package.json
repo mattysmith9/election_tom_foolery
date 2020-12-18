@@ -1,0 +1,15 @@
+{
+  "name": "election",
+  "version": "1.0.0",
+  "description": "election shit",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "matty smith",
+  "license": "ISC",
+  "dependencies": {
+    "csvjson": "^5.1.0",
+    "fs": "0.0.1-security"
+  }
+}
