@@ -3,7 +3,7 @@ const readFile = require('fs').readFile;
 const writeFile = require('fs').writeFile;
 
 readFile(
-  './president_results/presidential.json',
+  './quick.js',
   'utf-8',
   (err, fileContent) => {
     if (err) {
@@ -16,7 +16,7 @@ readFile(
       finalTxs.push(fileContent[i]);
     }
     const csvData = csvjson.toCSV(finalTxs, {
-      properties: 'data, meta'
+      properties: 'data, races'
     });
     writeFile('./presidential4.csv', csvData, (err) => {
       if (err) {

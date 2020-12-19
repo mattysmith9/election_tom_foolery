@@ -1,0 +1,1147 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$ref": "#/definitions/California",
+  "definitions": {
+    "California": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "data": {
+          "$ref": "#/definitions/Data"
+        },
+        "meta": {
+          "$ref": "#/definitions/Meta"
+        }
+      },
+      "required": ["data", "meta"],
+      "title": "California"
+    },
+    "Data": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "races": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Race"
+          }
+        },
+        "party_control": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PartyControl"
+          }
+        },
+        "liveUpdates": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/LiveUpdate"
+          }
+        }
+      },
+      "required": ["liveUpdates", "party_control", "races"],
+      "title": "Data"
+    },
+    "LiveUpdate": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "author": {
+          "type": "string"
+        },
+        "author_title_or_location": {
+          "type": "string"
+        },
+        "text": {
+          "type": "string"
+        },
+        "link_url": {
+          "type": "string",
+          "qt-uri-protocols": ["https"],
+          "qt-uri-extensions": [".html"]
+        },
+        "link_text": {
+          "type": "string"
+        },
+        "linked_state_1": {
+          "$ref": "#/definitions/LinkedState1"
+        },
+        "linked_state_2": {
+          "type": "string"
+        },
+        "linked_state_3": {
+          "type": "string"
+        },
+        "image_url": {
+          "type": "string",
+          "qt-uri-protocols": ["https"],
+          "qt-uri-extensions": [".jpg", ".png"]
+        },
+        "image_credit": {
+          "$ref": "#/definitions/ImageCredit"
+        },
+        "datetime": {
+          "type": "integer"
+        },
+        "author_headshot": {
+          "type": "string",
+          "format": "uri",
+          "qt-uri-protocols": ["https"],
+          "qt-uri-extensions": [".html", ".jpg", ".png"]
+        },
+        "is_today": {
+          "type": "boolean"
+        },
+        "linked_states": {
+          "$ref": "#/definitions/LinkedStatesUnion"
+        },
+        "winner": {
+          "$ref": "#/definitions/Winner"
+        },
+        "include_on_homepage": {
+          "type": "boolean"
+        },
+        "include_in_reporter_updates_feed": {
+          "type": "boolean"
+        },
+        "office": {
+          "$ref": "#/definitions/Office"
+        },
+        "type": {
+          "$ref": "#/definitions/Type"
+        },
+        "call_type": {
+          "$ref": "#/definitions/CallType"
+        },
+        "race_id": {
+          "type": "string"
+        },
+        "party_id": {
+          "$ref": "#/definitions/PartyID"
+        },
+        "candidate_last_name": {
+          "type": "string"
+        },
+        "candidate_name_display": {
+          "type": "string"
+        },
+        "candidate_id": {
+          "type": "string"
+        },
+        "race_call_party_winner": {
+          "$ref": "#/definitions/PartyID"
+        },
+        "state_name": {
+          "type": "string"
+        },
+        "link": {
+          "type": "string",
+          "format": "uri",
+          "qt-uri-protocols": ["https"],
+          "qt-uri-extensions": [".html", ".jpg", ".png"]
+        },
+        "bop": {
+          "type": "boolean"
+        },
+        "hide_from_homepage": {
+          "$ref": "#/definitions/HideFromHomepage"
+        },
+        "hide_from_liveblog": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "datetime",
+        "id",
+        "is_today",
+        "linked_states",
+        "text",
+        "winner"
+      ],
+      "title": "LiveUpdate"
+    },
+    "LinkedState": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "state_id": {
+          "$ref": "#/definitions/LinkedState1"
+        },
+        "state_name": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri",
+          "qt-uri-protocols": ["https"],
+          "qt-uri-extensions": [".html", ".jpg", ".png"]
+        }
+      },
+      "required": [],
+      "title": "LinkedState"
+    },
+    "LinkedStatesClass": {
+      "type": "object",
+      "additionalProperties": false,
+      "title": "LinkedStatesClass"
+    },
+    "PartyControl": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "race_type": {
+          "type": "string"
+        },
+        "state_id": {
+          "type": "string"
+        },
+        "needed_for_control": {
+          "type": "integer"
+        },
+        "total": {
+          "type": "integer"
+        },
+        "no_election": {
+          "$ref": "#/definitions/NoElection"
+        },
+        "winner": {
+          "type": "string"
+        },
+        "parties": {
+          "$ref": "#/definitions/Parties"
+        },
+        "winnerCalledTimestamp": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "needed_for_control",
+        "no_election",
+        "parties",
+        "race_type",
+        "state_id",
+        "total",
+        "winner"
+      ],
+      "title": "PartyControl"
+    },
+    "NoElection": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "democrat": {
+          "type": "integer"
+        },
+        "republican": {
+          "type": "integer"
+        },
+        "other": {
+          "type": "integer"
+        }
+      },
+      "required": [],
+      "title": "NoElection"
+    },
+    "Parties": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "democrat": {
+          "$ref": "#/definitions/Democrat"
+        },
+        "republican": {
+          "$ref": "#/definitions/Democrat"
+        },
+        "other": {
+          "$ref": "#/definitions/Democrat"
+        }
+      },
+      "required": ["democrat", "other", "republican"],
+      "title": "Parties"
+    },
+    "Democrat": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "party_id": {
+          "type": "string"
+        },
+        "name_display": {
+          "type": "string"
+        },
+        "name_abbr": {
+          "type": "string"
+        },
+        "count": {
+          "type": "integer"
+        },
+        "votes": {
+          "type": "integer"
+        },
+        "percent": {
+          "type": "string"
+        },
+        "change": {
+          "type": "integer"
+        },
+        "flip_count": {
+          "type": "integer"
+        },
+        "leader_count": {
+          "type": "integer"
+        },
+        "change_full": {
+          "type": "string"
+        },
+        "change_abbr": {
+          "type": "string"
+        },
+        "flip_text_full": {
+          "type": "string"
+        },
+        "flip_text_extra": {
+          "type": "string"
+        },
+        "flip_text_abbr": {
+          "type": "string"
+        },
+        "winner": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "change",
+        "change_abbr",
+        "change_full",
+        "count",
+        "flip_count",
+        "flip_text_abbr",
+        "flip_text_extra",
+        "flip_text_full",
+        "leader_count",
+        "name_abbr",
+        "name_display",
+        "party_id",
+        "percent",
+        "votes",
+        "winner"
+      ],
+      "title": "Democrat"
+    },
+    "Race": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "race_id": {
+          "type": "string"
+        },
+        "race_slug": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri",
+          "qt-uri-protocols": ["https"],
+          "qt-uri-extensions": [".html", ".jpg", ".png"]
+        },
+        "state_page_url": {
+          "type": "string",
+          "format": "uri",
+          "qt-uri-protocols": ["https"],
+          "qt-uri-extensions": [".html", ".jpg", ".png"]
+        },
+        "ap_polls_page": {
+          "type": "string",
+          "format": "uri",
+          "qt-uri-protocols": ["https"],
+          "qt-uri-extensions": [".html", ".jpg", ".png"]
+        },
+        "edison_exit_polls_page": {
+          "type": "string",
+          "format": "uri",
+          "qt-uri-protocols": ["https"],
+          "qt-uri-extensions": [".html", ".jpg", ".png"]
+        },
+        "race_type": {
+          "$ref": "#/definitions/Office"
+        },
+        "election_type": {
+          "type": "string"
+        },
+        "election_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "runoff": {
+          "type": "boolean"
+        },
+        "race_name": {
+          "$ref": "#/definitions/Office"
+        },
+        "office": {
+          "$ref": "#/definitions/Office"
+        },
+        "officeid": {
+          "type": "string"
+        },
+        "race_rating": {
+          "type": "string"
+        },
+        "seat": {
+          "type": "string"
+        },
+        "seat_name": {
+          "type": "string"
+        },
+        "state_id": {
+          "type": "string"
+        },
+        "state_slug": {
+          "type": "string"
+        },
+        "state_name": {
+          "type": "string"
+        },
+        "state_nyt_abbrev": {
+          "type": "string"
+        },
+        "state_shape": {
+          "type": "string"
+        },
+        "state_aspect_ratio": {
+          "type": "number"
+        },
+        "party_id": {
+          "type": "string"
+        },
+        "uncontested": {
+          "type": "boolean"
+        },
+        "report": {
+          "type": "boolean"
+        },
+        "result": {
+          "type": "string"
+        },
+        "result_source": {
+          "type": "string"
+        },
+        "gain": {
+          "type": "boolean"
+        },
+        "lost_seat": {
+          "type": "string"
+        },
+        "votes": {
+          "type": "integer"
+        },
+        "electoral_votes": {
+          "type": "integer"
+        },
+        "absentee_votes": {
+          "type": "integer"
+        },
+        "absentee_counties": {
+          "type": "integer"
+        },
+        "absentee_count_progress": {
+          "$ref": "#/definitions/AbsenteeCountProgress"
+        },
+        "poll_display": {
+          "type": "string"
+        },
+        "poll_countdown_display": {
+          "type": "string"
+        },
+        "poll_waiting_display": {
+          "type": "string"
+        },
+        "poll_time": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "poll_time_short": {
+          "type": "string"
+        },
+        "precincts_reporting": {
+          "type": "integer"
+        },
+        "precincts_total": {
+          "type": "integer"
+        },
+        "reporting_display": {
+          "type": "string"
+        },
+        "reporting_value": {
+          "type": "string"
+        },
+        "eevp": {
+          "type": "integer"
+        },
+        "tot_exp_vote": {
+          "type": "integer"
+        },
+        "eevp_source": {
+          "$ref": "#/definitions/Source"
+        },
+        "eevp_value": {
+          "type": "string"
+        },
+        "eevp_display": {
+          "type": "string"
+        },
+        "county_data_source": {
+          "$ref": "#/definitions/Source"
+        },
+        "incumbent_party": {
+          "type": "string"
+        },
+        "no_forecast": {
+          "type": "boolean"
+        },
+        "last_updated": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "candidates": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Winner"
+          }
+        },
+        "has_incumbent": {
+          "type": "boolean"
+        },
+        "leader_margin_value": {
+          "type": "number"
+        },
+        "leader_margin_votes": {
+          "type": "integer"
+        },
+        "leader_margin_display": {
+          "type": "string"
+        },
+        "leader_margin_name_display": {
+          "type": "string"
+        },
+        "leader_party_id": {
+          "$ref": "#/definitions/PartyID"
+        },
+        "counties": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/County"
+          }
+        },
+        "votes2016": {
+          "type": "integer"
+        },
+        "margin2016": {
+          "type": "integer"
+        },
+        "clinton2016": {
+          "type": "integer"
+        },
+        "trump2016": {
+          "type": "integer"
+        },
+        "votes2012": {
+          "type": "integer"
+        },
+        "margin2012": {
+          "type": "number"
+        },
+        "expectations_text": {
+          "type": "string"
+        },
+        "expectations_text_short": {
+          "type": "string"
+        },
+        "absentee_ballot_deadline": {
+          "type": "integer"
+        },
+        "absentee_postmark_deadline": {
+          "type": "integer"
+        },
+        "update_sentences": {
+          "$ref": "#/definitions/UpdateSentences"
+        },
+        "race_diff": {
+          "$ref": "#/definitions/RaceDiff"
+        },
+        "winnerCalledTimestamp": {
+          "type": "integer"
+        },
+        "timeseries": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Timesery"
+          }
+        }
+      },
+      "required": [
+        "absentee_ballot_deadline",
+        "absentee_count_progress",
+        "absentee_counties",
+        "absentee_postmark_deadline",
+        "absentee_votes",
+        "ap_polls_page",
+        "candidates",
+        "clinton2016",
+        "counties",
+        "county_data_source",
+        "edison_exit_polls_page",
+        "eevp",
+        "eevp_display",
+        "eevp_source",
+        "eevp_value",
+        "election_date",
+        "election_type",
+        "electoral_votes",
+        "expectations_text",
+        "expectations_text_short",
+        "gain",
+        "has_incumbent",
+        "incumbent_party",
+        "last_updated",
+        "leader_margin_display",
+        "leader_margin_name_display",
+        "leader_margin_value",
+        "leader_margin_votes",
+        "leader_party_id",
+        "lost_seat",
+        "margin2012",
+        "margin2016",
+        "no_forecast",
+        "office",
+        "officeid",
+        "party_id",
+        "poll_countdown_display",
+        "poll_display",
+        "poll_time",
+        "poll_time_short",
+        "poll_waiting_display",
+        "precincts_reporting",
+        "precincts_total",
+        "race_diff",
+        "race_id",
+        "race_name",
+        "race_rating",
+        "race_slug",
+        "race_type",
+        "report",
+        "reporting_display",
+        "reporting_value",
+        "result",
+        "result_source",
+        "runoff",
+        "seat",
+        "seat_name",
+        "state_aspect_ratio",
+        "state_id",
+        "state_name",
+        "state_nyt_abbrev",
+        "state_page_url",
+        "state_shape",
+        "state_slug",
+        "timeseries",
+        "tot_exp_vote",
+        "trump2016",
+        "uncontested",
+        "update_sentences",
+        "url",
+        "votes",
+        "votes2012",
+        "votes2016",
+        "winnerCalledTimestamp"
+      ],
+      "title": "Race"
+    },
+    "Winner": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "candidate_id": {
+          "type": "string"
+        },
+        "candidate_key": {
+          "type": "string"
+        },
+        "first_name": {
+          "type": "string"
+        },
+        "last_name": {
+          "type": "string"
+        },
+        "order": {
+          "type": "integer"
+        },
+        "name_display": {
+          "type": "string"
+        },
+        "party_id": {
+          "$ref": "#/definitions/PartyID"
+        },
+        "incumbent": {
+          "type": "boolean"
+        },
+        "runoff": {
+          "type": "boolean"
+        },
+        "winner": {
+          "type": "boolean"
+        },
+        "votes": {
+          "type": "integer"
+        },
+        "percent": {
+          "type": "number"
+        },
+        "percent_display": {
+          "type": "string"
+        },
+        "electoral_votes": {
+          "type": "integer"
+        },
+        "absentee_votes": {
+          "type": "integer"
+        },
+        "absentee_percent": {
+          "type": "number"
+        },
+        "img_url": {
+          "type": "string",
+          "format": "uri",
+          "qt-uri-protocols": ["https"],
+          "qt-uri-extensions": [".html", ".jpg", ".png"]
+        },
+        "has_image": {
+          "type": "boolean"
+        },
+        "link": {
+          "type": "string",
+          "qt-uri-protocols": ["https"],
+          "qt-uri-extensions": [".html"]
+        },
+        "pronoun": {
+          "$ref": "#/definitions/Pronoun"
+        },
+        "result_source": {
+          "type": "string"
+        }
+      },
+      "required": [],
+      "title": "Winner"
+    },
+    "County": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "fips": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "votes": {
+          "type": "integer"
+        },
+        "absentee_votes": {
+          "type": "integer"
+        },
+        "reporting": {
+          "type": "integer"
+        },
+        "precincts": {
+          "type": "integer"
+        },
+        "absentee_method": {
+          "type": "string"
+        },
+        "eevp": {
+          "type": "integer"
+        },
+        "tot_exp_vote": {
+          "type": "integer"
+        },
+        "eevp_value": {
+          "type": "string"
+        },
+        "eevp_display": {
+          "type": "string"
+        },
+        "eevp_source": {
+          "$ref": "#/definitions/Source"
+        },
+        "turnout_stage": {
+          "type": "integer"
+        },
+        "absentee_count_progress": {
+          "$ref": "#/definitions/AbsenteeCountProgress"
+        },
+        "absentee_max_ballots": {
+          "type": "integer"
+        },
+        "results": {
+          "$ref": "#/definitions/Results"
+        },
+        "results_absentee": {
+          "$ref": "#/definitions/Results"
+        },
+        "last_updated": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "leader_margin_value": {
+          "type": "number"
+        },
+        "leader_margin_display": {
+          "type": "string"
+        },
+        "leader_margin_name_display": {
+          "type": "string"
+        },
+        "leader_party_id": {
+          "$ref": "#/definitions/PartyID"
+        },
+        "margin2020": {
+          "type": "number"
+        },
+        "votes2016": {
+          "type": "integer"
+        },
+        "margin2016": {
+          "type": "number"
+        },
+        "votes2012": {
+          "type": "integer"
+        },
+        "margin2012": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "absentee_count_progress",
+        "absentee_max_ballots",
+        "absentee_method",
+        "absentee_votes",
+        "eevp",
+        "eevp_display",
+        "eevp_source",
+        "eevp_value",
+        "fips",
+        "last_updated",
+        "leader_margin_display",
+        "leader_margin_name_display",
+        "leader_margin_value",
+        "leader_party_id",
+        "margin2012",
+        "margin2016",
+        "margin2020",
+        "name",
+        "precincts",
+        "reporting",
+        "results",
+        "results_absentee",
+        "tot_exp_vote",
+        "turnout_stage",
+        "votes",
+        "votes2012",
+        "votes2016"
+      ],
+      "title": "County"
+    },
+    "Results": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "bidenj": {
+          "type": "integer"
+        },
+        "trumpd": {
+          "type": "integer"
+        },
+        "jorgensenj": {
+          "type": "integer"
+        },
+        "hawkinsh": {
+          "type": "integer"
+        },
+        "la_rivag": {
+          "type": "integer"
+        },
+        "de_la_fuenter": {
+          "type": "integer"
+        },
+        "write-ins": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "bidenj",
+        "de_la_fuenter",
+        "hawkinsh",
+        "jorgensenj",
+        "la_rivag",
+        "trumpd",
+        "write-ins"
+      ],
+      "title": "Results"
+    },
+    "RaceDiff": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "race_slug": {
+          "type": "string"
+        },
+        "boolean_things_that_happened": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "boolean"
+          }
+        },
+        "details_about_changes": {
+          "$ref": "#/definitions/LinkedStatesClass"
+        }
+      },
+      "required": [
+        "boolean_things_that_happened",
+        "details_about_changes",
+        "race_slug"
+      ],
+      "title": "RaceDiff"
+    },
+    "Timesery": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "vote_shares": {
+          "$ref": "#/definitions/VoteShares"
+        },
+        "votes": {
+          "type": "integer"
+        },
+        "eevp": {
+          "type": "integer"
+        },
+        "eevp_source": {
+          "$ref": "#/definitions/Source"
+        },
+        "timestamp": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": ["eevp", "eevp_source", "timestamp", "vote_shares", "votes"],
+      "title": "Timesery"
+    },
+    "VoteShares": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "trumpd": {
+          "type": "number"
+        },
+        "bidenj": {
+          "type": "number"
+        }
+      },
+      "required": ["bidenj", "trumpd"],
+      "title": "VoteShares"
+    },
+    "UpdateSentences": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "top_level": {
+          "$ref": "#/definitions/Counties"
+        },
+        "winner_card_leadin": {
+          "$ref": "#/definitions/Counties"
+        },
+        "counties": {
+          "$ref": "#/definitions/Counties"
+        },
+        "eevp": {
+          "$ref": "#/definitions/Counties"
+        },
+        "eevp_leadin": {
+          "$ref": "#/definitions/Counties"
+        }
+      },
+      "required": [
+        "counties",
+        "eevp",
+        "eevp_leadin",
+        "top_level",
+        "winner_card_leadin"
+      ],
+      "title": "UpdateSentences"
+    },
+    "Counties": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "sentence": {
+          "type": "string"
+        },
+        "timestamp": {
+          "type": "integer"
+        },
+        "is_new": {
+          "type": "boolean"
+        },
+        "hide_timestamp": {
+          "type": "boolean"
+        },
+        "generatedText": {
+          "type": "string"
+        },
+        "sentence_type": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "generatedText",
+        "hide_timestamp",
+        "is_new",
+        "sentence",
+        "sentence_type",
+        "timestamp"
+      ],
+      "title": "Counties"
+    },
+    "Meta": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "version": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "track": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "date"
+          }
+        },
+        "timestamp": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "required": ["timestamp", "track", "version"],
+      "title": "Meta"
+    },
+    "LinkedStatesUnion": {
+      "anyOf": [
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/LinkedState"
+          }
+        },
+        {
+          "$ref": "#/definitions/LinkedStatesClass"
+        }
+      ],
+      "title": "LinkedStatesUnion"
+    },
+    "CallType": {
+      "type": "string",
+      "enum": ["win", "runoff"],
+      "title": "CallType"
+    },
+    "HideFromHomepage": {
+      "type": "string",
+      "enum": ["", "TRUE"],
+      "title": "HideFromHomepage"
+    },
+    "ImageCredit": {
+      "type": "string",
+      "enum": ["", "Nicole Craine for The New York Times"],
+      "title": "ImageCredit"
+    },
+    "LinkedState1": {
+      "type": "string",
+      "enum": [
+        "",
+        "AZ",
+        "PA",
+        "GA",
+        "NV",
+        "MI",
+        "WI",
+        "ME",
+        "AK",
+        "NE",
+        "OH",
+        "IL",
+        "TX",
+        "NY",
+        "NC",
+        "WY",
+        "FL",
+        "AR",
+        "VA",
+        "KY"
+      ],
+      "title": "LinkedState1"
+    },
+    "Office": {
+      "type": "string",
+      "enum": [
+        "U.S. House",
+        "house",
+        "President",
+        "president",
+        "U.S. Senate",
+        "Governor"
+      ],
+      "title": "Office"
+    },
+    "PartyID": {
+      "type": "string",
+      "enum": [
+        "republican",
+        "democrat",
+        "libertarian",
+        "green",
+        "Ali",
+        "independent",
+        "write-ins"
+      ],
+      "title": "PartyID"
+    },
+    "Type": {
+      "type": "string",
+      "enum": ["race_call"],
+      "title": "Type"
+    },
+    "Pronoun": {
+      "type": "string",
+      "enum": ["he"],
+      "title": "Pronoun"
+    },
+    "AbsenteeCountProgress": {
+      "type": "string",
+      "enum": ["some", "unknown", "none", "all"],
+      "title": "AbsenteeCountProgress"
+    },
+    "Source": {
+      "type": "string",
+      "enum": ["edison"],
+      "title": "Source"
+    }
+  }
+}
