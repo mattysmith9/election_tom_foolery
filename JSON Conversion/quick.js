@@ -94,7 +94,7 @@ function transform(val, typ, getProps) {
       ? transformUnion(typ.unionMembers, val)
       : typ.hasOwnProperty('arrayItems')
       ? transformArray(typ.arrayItems, val)
-      : typ.hasOwnProperty('props')
+      : typ.hasOwnProperty('props') 
       ? transformObject(getProps(typ), typ.additional, val)
       : invalidValue(typ, val);
   }
